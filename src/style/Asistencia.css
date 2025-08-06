@@ -1,0 +1,159 @@
+/* Contenedor principal */
+.asistencia-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Título */
+.titulo {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Filtros */
+.filtros {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.filtro-item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 200px;
+}
+
+.filtro-item label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.filtro-item select,
+.filtro-item input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  background-color: #fff;
+}
+
+/* Tabla */
+.asistencia-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.asistencia-tabla th,
+.asistencia-tabla td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.asistencia-tabla th {
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+/* Estado de asistencia */
+.estado {
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.presente {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.ausente {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.justificado {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.sin-marcar {
+  background-color: #e2e3e5;
+  color: #383d41;
+}
+
+/* Botones de estado */
+.botones-estado {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.btn.presente {
+  background-color: #28a745;
+}
+
+.btn.presente:hover {
+  background-color: #218838;
+}
+
+.btn.ausente {
+  background-color: #dc3545;
+}
+
+.btn.ausente:hover {
+  background-color: #c82333;
+}
+
+.btn.justificado {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.btn.justificado:hover {
+  background-color: #e0a800;
+}
+
+/* Botón guardar */
+.btn-guardar {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  margin: 0 auto;
+  transition: background-color 0.2s ease;
+}
+
+.btn-guardar:hover {
+  background-color: #0056b3;
+}
