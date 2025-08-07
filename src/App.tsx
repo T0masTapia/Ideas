@@ -3,7 +3,7 @@ import Rutas from "./components/Rutas";
 
 function App() {
   return (
-    <BrowserRouter> {/* ⬅️ Envuelve tus rutas aquí */}
+    <BrowserRouter> 
       <Rutas />
     </BrowserRouter>
   );

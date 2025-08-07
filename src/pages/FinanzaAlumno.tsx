@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import '../style/FinanzaAlum.css';
+import NavbarPag from '../components/NavbarPag';
 
-const Finanzas = () => {
+const FinanzasAlumno = () => {
   const [filtro, setFiltro] = useState({ desde: '', hasta: '' });
 
   const transacciones = [
@@ -20,6 +21,8 @@ const Finanzas = () => {
   const balance = ingresos + gastos;
 
   return (
+    <>
+    <NavbarPag/>
     <div className="finanzas-wrapper">
       <h1 className="titulo">Panel de Finanzas</h1>
 
@@ -82,7 +85,8 @@ const Finanzas = () => {
         </table>
       </div>
     </div>
+    </>
   );
 };
 
-export default Finanzas;
+export default FinanzasAlumno;

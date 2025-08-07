@@ -1,8 +1,11 @@
 // FinanzaAdmiV1.jsx
+import NavbarPag from '../components/NavbarPag';
 import '../style/FinanzasAdmi.css';
 
 export default function FinanzaAdmiV1() {
   return (
+    <>
+    <NavbarPag/>
     <div className="finanzas-container">
       <div className="finanzas-content">
         <h2 className="finanzas-title">Panel de Finanzas - Administrador</h2>
@@ -40,5 +43,6 @@ export default function FinanzaAdmiV1() {
         </div>
       </div>
     </div>
+    </>
   );
 }

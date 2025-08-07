@@ -1,16 +1,81 @@
 import { Route, Routes } from "react-router-dom";
-import FinanzaAdmi from "../pages/FinanzaAdmi";
-import FinanzasAlumno from "../pages/FinanzaAlumno";
 import PerfilA from "../pages/PerfilA";
 import Asistencia from "../pages/Asistencia";
+import Home from "../pages/Home";
+import Login from "../pages/Login";
+import MatriculaA from "../pages/Matricula";
+import { AdminProvider } from "../context/AdminContext";
+import CrearU from "../pages/CrearU";
+import FinanzasViews from "./FinanzasViews";
+import PrivateRoute from "../components/PrivateRoute";  // <-- Importa PrivateRoute
+import CursosCrear from "../pages/Cursos";
 
 export default function Rutas() {
   return (
-    <Routes>
-        <Route path="/finanzaAdmi" element={<FinanzaAdmi />} />
-        <Route path="/finanzaAlumno" element={<FinanzasAlumno />} />
-        <Route path="/PerfilA" element={<PerfilA />} />
-        <Route path="/Asistencia" element={<Asistencia />} />
-    </Routes>
-  )
+    <AdminProvider>
+      <Routes>
+        {/* Ruta pública */}
+        <Route path="/login" element={<Login />} />
+
+        {/* Ruta pública (ejemplo Home puede ser pública, o protegerla si quieres) */}
+        <Route 
+        path="/" 
+        element={
+          <PrivateRoute>
+            <Home />
+          </PrivateRoute>
+        } />
+
+        {/* Rutas protegidas */}
+        <Route
+          path="/matricula-alumno"
+          element={
+            <PrivateRoute>
+              <MatriculaA />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/crear-usuario"
+          element={
+            <PrivateRoute>
+              <CrearU />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/finanzas"
+          element={
+            <PrivateRoute>
+              <FinanzasViews />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/perfilA"
+          element={
+            <PrivateRoute>
+              <PerfilA />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/asistencia"
+          element={
+            <PrivateRoute>
+              <Asistencia />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/cursos"
+          element={
+            <PrivateRoute>
+              <CursosCrear />
+            </PrivateRoute>
+          }
+        />
+      </Routes>
+    </AdminProvider>
+  );
 }

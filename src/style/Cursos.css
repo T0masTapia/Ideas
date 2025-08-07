@@ -1,0 +1,102 @@
+.cursos-crear-wrapper {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cursos-crear-wrapper h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.cursos-crear-content {
+  display: flex;
+  gap: 40px;
+}
+
+.cursos-crear-form {
+  flex: 1;
+}
+
+.cursos-crear-form label {
+  display: block;
+  margin-bottom: 16px;
+  color: #444;
+  font-weight: 600;
+}
+
+.cursos-crear-form input[type="text"],
+.cursos-crear-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.cursos-crear-form input[type="text"]:focus,
+.cursos-crear-form textarea:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.btn-crear-curso {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  background-color: #4a90e2;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-crear-curso:hover {
+  background-color: #357abd;
+}
+
+.cursos-tabla {
+  flex: 1;
+  overflow-x: auto;
+}
+
+.cursos-tabla h3 {
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.cursos-tabla table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+}
+
+.cursos-tabla th,
+.cursos-tabla td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.cursos-tabla th {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.cursos-tabla tr:hover {
+  background-color: #f1f7ff;
+}
