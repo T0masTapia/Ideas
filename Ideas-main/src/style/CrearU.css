@@ -1,0 +1,167 @@
+/* Contenedor general que posiciona formulario y tabla */
+.matricula-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+/* Contenedor del formulario */
+.matricula-container {
+  flex: 1;
+  max-width: 450px;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Contenedor de la tabla */
+.tabla-alumnos {
+  flex: 1;
+  max-width: 600px;
+  overflow-x: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos comunes */
+h2, h3 {
+  text-align: center;
+  color: #004080;
+  margin-bottom: 20px;
+}
+
+.matricula-form label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+.matricula-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  border: 1.8px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.matricula-form input:focus {
+  border-color: #004080;
+  outline: none;
+  box-shadow: 0 0 8px #a3c1ff;
+}
+
+.btn-matricular {
+  width: 100%;
+  padding: 14px;
+  background-color: #004080;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-matricular:hover {
+  background-color: #002f66;
+}
+
+/* Tabla de alumnos */
+.tabla-alumnos table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.tabla-alumnos th,
+.tabla-alumnos td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla-alumnos th {
+  background-color: #004080;
+  color: white;
+}
+
+.tabla-alumnos tr:hover {
+  background-color: #f1f7ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .matricula-wrapper {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+/* Estilos para el label que contiene el checkbox */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Ocultamos el checkbox original */
+.checkbox-label input[type='checkbox'] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+/* Recuadro personalizado para el checkbox */
+.checkbox-label input[type='checkbox'] + span {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #666;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+/* Hover: cambiar color borde */
+.checkbox-label:hover input[type='checkbox'] + span {
+  border-color: #007bff;
+}
+
+/* Marca de check usando ::after */
+.checkbox-label input[type='checkbox']:checked + span::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid #007bff;
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg);
+}
+
+/* Para un efecto de sombra sutil */
+.checkbox-label input[type='checkbox']:focus + span {
+  box-shadow: 0 0 3px 2px #80bdff;
+  outline: none;
+}
